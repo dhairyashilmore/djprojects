@@ -1,0 +1,210 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+      <nav id = "navbar" class = "flex s-ground bg-color">
+            <div class = "left-nav">
+                  <h2 class="t-white">My Portfolio</h2>
+            </div>
+            <div class = "right-nav">
+                  <ul>
+                  <li><a href="#home" class="t-white roboto">Home<i class="fa-solid fa-house"></i></a></li>
+                  <li><a href="#about" class="t-white roboto">About me<i class="fa-solid fa-user"></i></a></li>
+                  <li><a href="#Skills" class="t-white roboto">Skills<i class="fa-solid fa-code"></i></a></li>
+                  <li><a href="#Projects" class="t-white roboto">Projects<i class="fa-solid fa-project-diagram"></i></a></li>
+                  <li><a href="#Contact" class="t-white roboto">Contact<i class="fa-solid fa-rocket"></i></a></li>
+                  </ul>
+            </div> 
+      </nav>
+
+      <!-- Home section -->
+       <section id = "home" class = "flex s-around sw-80 m-auto">
+            <div class="home-left flext item-center">
+                  <div class ="home-content">
+                        <h6 class="popinss">Hi, I'am</h6>
+                        <h1 class = "t-white">Dhairyashil More</h1>
+                        <h4 class="popinss">Python Developer</h4>
+                        <a href="{% static 'pdf/sfd__Copy_.pdf' %}" target="_blank">
+                            <button class="btn">Resume</button>
+                        </a>
+                        <a class= "btn live popinss" id = "hireme" href=""
+                        target = "_blank">Lets Talk</a>
+
+
+
+                  </div>
+
+            </div>
+                   <div class="home-right flex s-center item-center">
+                        <div class="circle flex s-center items-center" id="mainimage">
+                              <img src="{% static 'images/linkPhoto.png' %}" alt="Profile Photo">
+                        </div>
+                   </div>
+      </section>
+
+
+      <!-- About section -->
+       <section id="about">
+            <h1 class="t center my-2 t-white f-2">About Me</h1>
+            <div class="about-container flex s-around">
+                  <div class = "about-left flex s-center items-center">
+                        <img src="{% static 'images/about.avif' %}" alt="about image">
+                  </div>
+            </div>
+            <div class="about_right flex">
+                  <div class="about-content">
+                        <h1 class="t-white m-b-1 popinss">Who am I?</h1>
+                        <p class="t-white popinss">I am a passionate Python developer with a strong foundation in programming and problem-solving.
+                          I have experience in developing web applications,
+                          data analysis, and automation using Python. 
+                          I am eager to contribute my skills and knowledge to
+                          create innovative solutions and continuously learn and grow
+                          in the field of software development.</p>
+                        <a href="btn" id="hireme" href="">Hire me</a>
+                  </div>
+            </div>     
+       </section>
+
+       <!--Skills Section-->
+       <section id= "skills">
+            <h1 class="t-center my-2 t-white f-2">Skills</h1>
+            <div class="services-centainer flex s-around h-50">
+                  <div class ="skills-left flex s-center items-center">
+                        <img src="{% static 'images/requirements.png' %}" alt="skills image">
+
+                  </div>
+                  <div class = "skills-right flex items-center">
+                        <div class="skills-container">
+                             <div class="java bar p-relative"><span class="bar-content left t-white">Python</span>
+                             <span class = "bar-content right-skills t-white">90%</span></div>
+                                    
+                             <div class="SQL bar p-relative"><span class="bar-content left t-white">SQL</span>
+                             <span class = "bar-content right-skills t-white">90%</span></div>
+
+                             <div class="Django bar p-relative"><span class="bar-content left t-white">Django</span>
+                             <span class = "bar-content right-skills t-white">80%</span></div>
+
+                             <div class="React bar p-relative"><span class="bar-content left t-white">React</span>
+                             <span class = "bar-content right-skills t-white">90%</span></div>
+
+                             <div class="JavaScript bar p-relative"><span class="bar-content left t-white">JavaScript</span>
+                             <span class = "bar-content right-skills t-white">90%</span></div>
+                                     
+
+                        
+                        </div>
+                   </div>
+            </div>
+      </section>
+
+      <!-- project section-->
+      <section id="Project">
+    <h1 class="text-center my-2 t-white f-2">Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="project-container flex s-center">
+        <div class="project-item flex f-col s-center items-center">
+            <h1 class="t-white poppins">AI Trace Finder</h1>
+            <p class="t-white poppins">
+                AI Trace Finder is a digital forensic project designed to identify the source scanner of a scanned image using artificial intelligence techniques. 
+                The system analyzes unique device-specific artifacts such as sensor pattern noise, pixel-level distortions, and compression signatures that are unintentionally embedded during the scanning process.
+                By extracting these hidden noise patterns and applying machine learning algorithms, the model learns to differentiate between scanners and accurately predict the originating device of an unknown image. 
+                This project demonstrates the application of image processing, feature extraction, and classification models in cybersecurity and digital forensics. 
+                AI Trace Finder can be used in fraud detection, document authentication, and legal investigations where verifying the authenticity and origin of scanned documents is critical.
+            </p>
+            <div class="buttons button flex s-around">
+                <a href="https://github.com/yourusername/amazon-clone" 
+                   target="_blank" 
+                   class="btn mx-1 m-top">
+                   GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-container flex s-center">
+        <div class="project-item flex f-col s-center items-center">
+            <h1 class="t-white poppins">Food Connect</h1>
+            <p class="t-white poppins">
+                Food Connect is a food distribution application that connects 
+                restaurants, donors, and NGOs to reduce food waste and deliver 
+                surplus food to people in need. The system manages food requests, 
+                donor listings, and real-time distribution tracking.
+            </p>
+            <div class="buttons button flex s-around">
+                <a href="https://github.com/yourusername/amazon-clone-2" 
+                   target="_blank" 
+                   class="btn mx-1 m-top">
+                   GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+ </section>
+
+     <!-- Contact Me Section -->
+    <section id="Contact" class="m-b-1">
+        <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
+        <div class="contact-container flex s-around items-centers">
+            <div class="form" id="contactForm">
+                <form method="post" > 
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
+                    </div>
+
+                    <div class="email form-div">
+                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
+                            required>
+                    </div>
+
+                    <div class="phone form-div">
+                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
+                            required>
+                    </div>
+                    
+                    <div class="textarea form-div">
+                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
+                            placeholder="Enter Messages"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppinss">Home</a></li>
+            <li><a href="#about" class="poppinss">About</a></li>
+            <li><a href="#skills" class="poppinss">Skills</a></li>
+            <li><a href="#projects" class="poppinss">Projects</a></li>
+            <li><a href="#portfolio" class="poppinss">Portfolio</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome ">
+            <a href="" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <a href="" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>
+            </a>
+                <a href="" target="_blank">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+            </a>
+            
+        </ul>
+        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Error By Night 
+                </span></p>
+
+    </footer>
+
+</body>
+</html>
