@@ -1,210 +1,780 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhairyashil More | Generative AI & Python Full Stack Engineer</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-      <nav id = "navbar" class = "flex s-ground bg-color">
-            <div class = "left-nav">
-                  <h2 class="t-white">My Portfolio</h2>
+
+    <!-- Header Navigation -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#hero">Dhairyashil<span>.</span></a>
             </div>
-            <div class = "right-nav">
-                  <ul>
-                  <li><a href="#home" class="t-white roboto">Home<i class="fa-solid fa-house"></i></a></li>
-                  <li><a href="#about" class="t-white roboto">About me<i class="fa-solid fa-user"></i></a></li>
-                  <li><a href="#Skills" class="t-white roboto">Skills<i class="fa-solid fa-code"></i></a></li>
-                  <li><a href="#Projects" class="t-white roboto">Projects<i class="fa-solid fa-project-diagram"></i></a></li>
-                  <li><a href="#Contact" class="t-white roboto">Contact<i class="fa-solid fa-rocket"></i></a></li>
-                  </ul>
-            </div> 
-      </nav>
-
-      <!-- Home section -->
-       <section id = "home" class = "flex s-around sw-80 m-auto">
-            <div class="home-left flext item-center">
-                  <div class ="home-content">
-                        <h6 class="popinss">Hi, I'am</h6>
-                        <h1 class = "t-white">Dhairyashil More</h1>
-                        <h4 class="popinss">Python Developer</h4>
-                        <a href="{% static 'pdf/sfd__Copy_.pdf' %}" target="_blank">
-                            <button class="btn">Resume</button>
-                        </a>
-                        <a class= "btn live popinss" id = "hireme" href=""
-                        target = "_blank">Lets Talk</a>
-
-
-
-                  </div>
-
-            </div>
-                   <div class="home-right flex s-center item-center">
-                        <div class="circle flex s-center items-center" id="mainimage">
-                              <img src="{% static 'images/linkPhoto.png' %}" alt="Profile Photo">
-                        </div>
-                   </div>
-      </section>
-
-
-      <!-- About section -->
-       <section id="about">
-            <h1 class="t center my-2 t-white f-2">About Me</h1>
-            <div class="about-container flex s-around">
-                  <div class = "about-left flex s-center items-center">
-                        <img src="{% static 'images/about.avif' %}" alt="about image">
-                  </div>
-            </div>
-            <div class="about_right flex">
-                  <div class="about-content">
-                        <h1 class="t-white m-b-1 popinss">Who am I?</h1>
-                        <p class="t-white popinss">I am a passionate Python developer with a strong foundation in programming and problem-solving.
-                          I have experience in developing web applications,
-                          data analysis, and automation using Python. 
-                          I am eager to contribute my skills and knowledge to
-                          create innovative solutions and continuously learn and grow
-                          in the field of software development.</p>
-                        <a href="btn" id="hireme" href="">Hire me</a>
-                  </div>
-            </div>     
-       </section>
-
-       <!--Skills Section-->
-       <section id= "skills">
-            <h1 class="t-center my-2 t-white f-2">Skills</h1>
-            <div class="services-centainer flex s-around h-50">
-                  <div class ="skills-left flex s-center items-center">
-                        <img src="{% static 'images/requirements.png' %}" alt="skills image">
-
-                  </div>
-                  <div class = "skills-right flex items-center">
-                        <div class="skills-container">
-                             <div class="java bar p-relative"><span class="bar-content left t-white">Python</span>
-                             <span class = "bar-content right-skills t-white">90%</span></div>
-                                    
-                             <div class="SQL bar p-relative"><span class="bar-content left t-white">SQL</span>
-                             <span class = "bar-content right-skills t-white">90%</span></div>
-
-                             <div class="Django bar p-relative"><span class="bar-content left t-white">Django</span>
-                             <span class = "bar-content right-skills t-white">80%</span></div>
-
-                             <div class="React bar p-relative"><span class="bar-content left t-white">React</span>
-                             <span class = "bar-content right-skills t-white">90%</span></div>
-
-                             <div class="JavaScript bar p-relative"><span class="bar-content left t-white">JavaScript</span>
-                             <span class = "bar-content right-skills t-white">90%</span></div>
-                                     
-
-                        
-                        </div>
-                   </div>
-            </div>
-      </section>
-
-      <!-- project section-->
-      <section id="Project">
-    <h1 class="text-center my-2 t-white f-2">Projects</h1>
-
-    <!-- Project 1 -->
-    <div class="project-container flex s-center">
-        <div class="project-item flex f-col s-center items-center">
-            <h1 class="t-white poppins">AI Trace Finder</h1>
-            <p class="t-white poppins">
-                AI Trace Finder is a digital forensic project designed to identify the source scanner of a scanned image using artificial intelligence techniques. 
-                The system analyzes unique device-specific artifacts such as sensor pattern noise, pixel-level distortions, and compression signatures that are unintentionally embedded during the scanning process.
-                By extracting these hidden noise patterns and applying machine learning algorithms, the model learns to differentiate between scanners and accurately predict the originating device of an unknown image. 
-                This project demonstrates the application of image processing, feature extraction, and classification models in cybersecurity and digital forensics. 
-                AI Trace Finder can be used in fraud detection, document authentication, and legal investigations where verifying the authenticity and origin of scanned documents is critical.
-            </p>
-            <div class="buttons button flex s-around">
-                <a href="https://github.com/yourusername/amazon-clone" 
-                   target="_blank" 
-                   class="btn mx-1 m-top">
-                   GitHub
-                </a>
-            </div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-cta-btn">Connect</a></li>
+            </ul>
         </div>
-    </div>
+    </header>
 
-    <!-- Project 2 -->
-    <div class="project-container flex s-center">
-        <div class="project-item flex f-col s-center items-center">
-            <h1 class="t-white poppins">Food Connect</h1>
-            <p class="t-white poppins">
-                Food Connect is a food distribution application that connects 
-                restaurants, donors, and NGOs to reduce food waste and deliver 
-                surplus food to people in need. The system manages food requests, 
-                donor listings, and real-time distribution tracking.
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <p class="hero-subtitle">Generative AI & Python Full Stack Engineer</p>
+            <h1 class="hero-title">
+                <span>Generative AI Solutions.</span><br>
+                <span>Python Backend Scale.</span>
+            </h1>
+            <p class="hero-tagline">
+                Hi, I'm Dhairyashil More. I design intelligent LLM agents, Retrieval-Augmented Generation (RAG) pipelines, and integrate them into robust full-stack web architectures.
             </p>
-            <div class="buttons button flex s-around">
-                <a href="https://github.com/yourusername/amazon-clone-2" 
-                   target="_blank" 
-                   class="btn mx-1 m-top">
-                   GitHub
+            <div class="hero-ctas">
+                <a href="{% static 'pdf/June_full_stack.pdf' %}" target="_blank" class="btn-primary">
+                    <i class="fa-solid fa-file-pdf"></i> View Resume
                 </a>
+                <a href="#contact" class="btn-secondary">Let's Talk <i class="fa-solid fa-chevron-right"></i></a>
             </div>
-        </div>
-    </div>
- </section>
+            
+            <div class="hero-visual">
+                <div class="hero-circle">
+                    <img src="{% static 'images/avatar_3d.png' %}" alt="Dhairyashil More 3D Avatar">
+                </div>
+            </div>
+        </section>
 
-     <!-- Contact Me Section -->
-    <section id="Contact" class="m-b-1">
-        <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
-        <div class="contact-container flex s-around items-centers">
-            <div class="form" id="contactForm">
-                <form method="post" > 
+        <!-- About Bento Section -->
+        <section id="about">
+            <div class="section-header">
+                <span class="section-label">Profile</span>
+                <h2 class="section-title">A Brief Look at Me</h2>
+                <p class="section-subtitle">Bridging my academic AI foundation with industry web application support and engineering.</p>
+            </div>
+
+            <div class="bento-container">
+                <!-- Bento Block 1: Gen AI Core (Span 2) -->
+                <div class="bento-card bento-span-2">
+                    <i class="fa-solid fa-brain bento-icon" style="color: var(--accent-orange);"></i>
+                    <h3 class="bento-card-title">Generative AI & LLM Solutions</h3>
+                    <p class="bento-card-text">
+                        I specialize in orchestrating Large Language Models (ChatGPT, Claude) to build custom contextual workflows. My work involves designing Retrieval-Augmented Generation (RAG) pipelines, creating semantic context stores using vector databases, and constructing multi-agent automation systems that safely connect APIs to intelligent models.
+                    </p>
+                </div>
+
+                <!-- Bento Block 2: Quick Specs (Span 1) -->
+                <div class="bento-card">
+                    <i class="fa-solid fa-graduation-cap bento-icon"></i>
+                    <h3 class="bento-card-title">Academic AI Degree</h3>
+                    <p class="bento-card-text">
+                        <strong>Degree:</strong> B.E. in Artificial Intelligence & Data Science (2025)<br>
+                        <strong>College:</strong> P. R. Pote Patil College, Amravati<br>
+                        <strong>CGPA:</strong> 8.27 / 10
+                    </p>
+                </div>
+
+                <!-- Bento Block 3: Python Full Stack Core (Span 3) -->
+                <div class="bento-card bento-span-3">
+                    <i class="fa-solid fa-layer-group bento-icon" style="color: var(--accent-purple);"></i>
+                    <h3 class="bento-card-title">Engineering Tech Stack</h3>
+                    <div class="tech-flex">
+                        <span class="tech-badge"><i class="fa-solid fa-gears"></i> RAG / LLM Integration</span>
+                        <span class="tech-badge"><i class="fa-solid fa-database"></i> Vector Databases</span>
+                        <span class="tech-badge"><i class="fa-solid fa-microchip"></i> Machine Learning</span>
+                        <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fa-solid fa-cubes"></i> Django / DRF</span>
+                        <span class="tech-badge"><i class="fa-solid fa-gears"></i> FastAPI</span>
+                        <span class="tech-badge"><i class="fa-brands fa-react"></i> React</span>
+                        <span class="tech-badge"><i class="fa-solid fa-database"></i> MySQL / MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Skills Hub Section -->
+        <section id="skills">
+            <div class="section-header">
+                <span class="section-label">Proficiency</span>
+                <h2 class="section-title">Skills & Capabilities</h2>
+                <p class="section-subtitle">A comparison of the technologies and engineering methodologies that power my work.</p>
+            </div>
+
+            <div class="skills-hub-container">
+                <!-- Skill Category Tabs (AI-First) -->
+                <div class="skills-tabs">
+                    <button class="tab-btn active" data-target="ai-auto">AI & Gen AI</button>
+                    <button class="tab-btn" data-target="backend">Backend & DB</button>
+                    <button class="tab-btn" data-target="programming">Languages</button>
+                    <button class="tab-btn" data-target="frontend">Frontend & Tools</button>
+                </div>
+
+                <!-- Skills Display Box -->
+                <div class="skills-content">
+                    <!-- Tab 1: AI & Gen AI (Default Active) -->
+                    <div class="skills-panel active" id="ai-auto">
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Generative AI & LLM APIs (OpenAI, Anthropic Claude)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>RAG Pipelines & Context Retrieval Orchestration</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Vector Databases (ChromaDB, Pinecone, FAISS)</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Machine Learning Fundamentals (NumPy, Pandas, Scikit-Learn)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Backend & DB -->
+                    <div class="skills-panel" id="backend">
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Django & Django REST Framework</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>REST API Design & JWT Auth</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>FastAPI & API Deployment</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>MySQL & MongoDB (Schema Design)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Programming Languages -->
+                    <div class="skills-panel" id="programming">
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>JavaScript (ES6+)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>SQL (Complex Queries & Optimization)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Object-Oriented Programming (OOP)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Frontend & Tools -->
+                    <div class="skills-panel" id="frontend">
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>HTML5 / CSS3</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>React (Core & State Management)</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Git & GitHub (Collaborative Workflows)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-info">
+                                <span>Postman, AWS Fundamentals & CI/CD Pipelines</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience">
+            <div class="section-header">
+                <span class="section-label">Timeline</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Applying robust backend structures and analytical isolation to active production codebases.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Application Support Engineer</h3>
+                                <p class="timeline-company">Bajaj Allianz Life Insurance</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jan 2026 – Present</span>
+                                <p class="timeline-location">Viman Nagar, Pune</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-body">
+                            <li>Provide key L1/L2 application support for critical insurance web applications.</li>
+                            <li>Investigate and troubleshoot technical, database, and functional issues.</li>
+                            <li>Analyze incident logs, retrieve validation links, and validate quotation mapping policies.</li>
+                            <li>Conduct policy-related backend validation and defect tracking.</li>
+                            <li>Identify automation opportunities and write utility scripts to streamline troubleshooting.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="border-color: var(--accent-orange); box-shadow: 0 0 10px var(--accent-orange);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Python Developer Trainee</h3>
+                                <p class="timeline-company">Kiran Academy</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jul 2025 – Dec 2025</span>
+                                <p class="timeline-location">Karvenagar, Pune</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-body">
+                            <li>Completed intensive python and full stack training covering MVC, database optimization, and API architecture.</li>
+                            <li>Developed CRUD applications and designed REST APIs using Django and Django REST Framework.</li>
+                            <li>Optimized MySQL database schemas, designed relationships, and resolved query bottlenecks.</li>
+                            <li>Integrated React frontends with backend APIs and set up secure token authentication (JWT).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects">
+            <div class="section-header">
+                <span class="section-label">Showcase</span>
+                <h2 class="section-title">Selected Projects</h2>
+                <p class="section-subtitle">Real-world applications built to demonstrate software engineering and machine learning principles.</p>
+            </div>
+
+            <div class="projects-showcase">
+                <!-- Project 1: AI Trace Finder -->
+                <div class="project-showcase-card">
+                    <div class="project-grid">
+                        <div class="project-info-side">
+                            <span class="project-date-tag">Active 2025</span>
+                            <h3 class="project-title">AI Trace Finder</h3>
+                            <p class="project-desc">
+                                A digital forensics application that identifies the specific source scanner of an image. It analyzes sensor pattern noise, compression artifacts, and pixel-level distortions to detect image authenticity.
+                            </p>
+                            <div class="project-specs">
+                                <div class="project-spec-item"><strong>Frameworks:</strong> OpenCV, NumPy, Scikit-Learn</div>
+                                <div class="project-spec-item"><strong>Core Logic:</strong> Feature extraction, Noise analysis</div>
+                                <div class="project-spec-item"><strong>Algorithm:</strong> Machine Learning Classification (Random Forest/SVM)</div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/dhairyashilmore" target="_blank" class="btn-primary"><i class="fa-brands fa-github"></i> Repository</a>
+                            </div>
+                        </div>
+                        <div class="project-media-side">
+                            <!-- Browser mockup -->
+                            <div class="project-mockup" style="border-color: #3a3a3c;">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot-group">
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                    </div>
+                                    <span class="mockup-title">forensics.tracefinder</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-widget">
+                                        <span class="mockup-label">Noise Analysis Status</span>
+                                        <div class="mockup-value" style="color: #27c93f;">Completed</div>
+                                    </div>
+                                    <div class="mockup-widget">
+                                        <span class="mockup-label">Prediction Accuracy</span>
+                                        <div class="mockup-value" style="font-size: 0.9rem; color: var(--accent-blue);">94.8% Match</div>
+                                    </div>
+                                    <div>
+                                        <span class="mockup-label">Sensor Noise Extraction</span>
+                                        <div class="mockup-bar"><div class="mockup-bar-fill" style="width: 94.8%;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Job Application Tracker with AI Recruiter Agent -->
+                <div class="project-showcase-card">
+                    <div class="project-grid">
+                        <div class="project-info-side">
+                            <span class="project-date-tag">Active 2026</span>
+                            <h3 class="project-title">AI-Powered Job Tracker</h3>
+                            <p class="project-desc">
+                                A full-stack workflow system developed to streamline job search tracking. Integrates a smart LLM backend agent that analyzes job descriptions, extracts skills matching, and auto-generates tailored cold outreach emails.
+                            </p>
+                            <div class="project-specs">
+                                <div class="project-spec-item"><strong>AI Integration:</strong> Claude API / OpenAI GPT-4o-mini</div>
+                                <div class="project-spec-item"><strong>Backend Stack:</strong> Django, Django REST Framework, MySQL</div>
+                                <div class="project-spec-item"><strong>Frontend:</strong> React.js, Context State Management</div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/dhairyashilmore" target="_blank" class="btn-primary"><i class="fa-brands fa-github"></i> Repository</a>
+                            </div>
+                        </div>
+                        <div class="project-media-side">
+                            <!-- Browser mockup -->
+                            <div class="project-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot-group">
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                    </div>
+                                    <span class="mockup-title">dashboard.jobtracker</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-widget">
+                                        <span class="mockup-label">AI Match Score</span>
+                                        <div class="mockup-value" style="color: #27c93f;">92% Compatibility</div>
+                                    </div>
+                                    <div class="mockup-widget">
+                                        <span class="mockup-label">Recruiter Outreach Drafted</span>
+                                        <div class="mockup-value" style="font-size: 0.9rem; color: var(--accent-orange);">Generated by LLM</div>
+                                    </div>
+                                    <div>
+                                        <span class="mockup-label">API Response Latency</span>
+                                        <div class="mockup-bar"><div class="mockup-bar-fill" style="width: 100%; background: #27c93f;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Food Connect -->
+                <div class="project-showcase-card">
+                    <div class="project-grid">
+                        <div class="project-info-side">
+                            <span class="project-date-tag">Active 2024</span>
+                            <h3 class="project-title">Food Connect</h3>
+                            <p class="project-desc">
+                                A food donation coordinating platform connecting donor restaurants, individuals, and local NGOs. Uses real-time listener databases to organize distributions and reduce food waste.
+                            </p>
+                            <div class="project-specs">
+                                <div class="project-spec-item"><strong>Frontend:</strong> HTML5, CSS3, ES6 JavaScript</div>
+                                <div class="project-spec-item"><strong>Services:</strong> Node.js, Firebase (Realtime Database & Storage)</div>
+                                <div class="project-spec-item"><strong>Features:</strong> Workflow coordination, Donor requests, Realtime sync</div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/dhairyashilmore/Food-Connect" target="_blank" class="btn-primary"><i class="fa-brands fa-github"></i> Repository</a>
+                            </div>
+                        </div>
+                        <div class="project-media-side">
+                            <!-- Browser mockup -->
+                            <div class="project-mockup" style="border-color: #3a3a3c;">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot-group">
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                        <span class="mockup-dot"></span>
+                                    </div>
+                                    <span class="mockup-title">app.foodconnect</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-widget">
+                                        <span class="mockup-label">Food Donated</span>
+                                        <div class="mockup-value" style="color: #27c93f;">180+ Kgs</div>
+                                    </div>
+                                    <div class="mockup-widget">
+                                        <span class="mockup-label">Realtime Listeners</span>
+                                        <div class="mockup-value" style="font-size: 0.9rem; color: var(--accent-blue);">Connected to Firebase</div>
+                                    </div>
+                                    <div>
+                                        <span class="mockup-label">Operational Capacity</span>
+                                        <div class="mockup-bar"><div class="mockup-bar-fill" style="width: 82%;"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials Sliding Tab Section (Education & Certifications) -->
+        <section id="credentials">
+            <div class="section-header">
+                <span class="section-label">Qualifications</span>
+                <h2 class="section-title">Education & Certs</h2>
+                <p class="section-subtitle">Summary of academic records and certified technical milestones.</p>
+            </div>
+
+            <div class="tabs-container">
+                <div class="toggle-switch-wrapper">
+                    <div class="toggle-switch">
+                        <button class="toggle-btn active" data-target="certs">Certifications</button>
+                        <button class="toggle-btn" data-target="education">Education</button>
+                    </div>
+                </div>
+
+                <div class="edu-cert-content">
+                    <!-- Tab Content: Certifications -->
+                    <div class="edu-cert-panel active" id="certs">
+                        <!-- Cert 1 -->
+                        <div class="edu-cert-card">
+                            <div class="edu-cert-main">
+                                <h3>Python Full Stack Development Certification</h3>
+                                <p class="edu-cert-sub">Kiran Academy</p>
+                                <p class="edu-cert-details">Python, Django, Django REST Framework, REST APIs, SQL, backend deployment.</p>
+                            </div>
+                            <div class="edu-cert-meta">
+                                <span class="edu-cert-date">2025</span>
+                            </div>
+                        </div>
+                        <!-- Cert 2 -->
+                        <div class="edu-cert-card">
+                            <div class="edu-cert-main">
+                                <h3>Python for Data Science Certification</h3>
+                                <p class="edu-cert-sub">NPTEL & IIT Madras</p>
+                                <p class="edu-cert-details">Python libraries (NumPy, Pandas), data visualization, and ML algorithms.</p>
+                            </div>
+                            <div class="edu-cert-meta">
+                                <span class="edu-cert-date">2024</span>
+                            </div>
+                        </div>
+                        <!-- Cert 3 -->
+                        <div class="edu-cert-card">
+                            <div class="edu-cert-main">
+                                <h3>AWS Academy Cloud Foundations</h3>
+                                <p class="edu-cert-sub">Amazon Web Services</p>
+                                <p class="edu-cert-details">AWS Cloud core concepts, global infrastructure, security, IAM, and virtual deployment.</p>
+                            </div>
+                            <div class="edu-cert-meta">
+                                <span class="edu-cert-date">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Content: Education -->
+                    <div class="edu-cert-panel" id="education">
+                        <!-- Edu 1 -->
+                        <div class="edu-cert-card">
+                            <div class="edu-cert-main">
+                                <h3>B.E. in Artificial Intelligence & Data Science</h3>
+                                <p class="edu-cert-sub">P. R. Pote Patil College of Engineering & Management</p>
+                                <p class="edu-cert-details">Amravati, India</p>
+                            </div>
+                            <div class="edu-cert-meta">
+                                <span class="edu-cert-date">Graduated 2025</span>
+                                <div class="edu-cert-score">CGPA: 8.27 / 10</div>
+                            </div>
+                        </div>
+                        <!-- Edu 2 -->
+                        <div class="edu-cert-card">
+                            <div class="edu-cert-main">
+                                <h3>Diploma in Computer Science</h3>
+                                <p class="edu-cert-sub">Shreeyash College of Engineering and Technology</p>
+                                <p class="edu-cert-details">Chhatrapati Sambhajinagar, India</p>
+                            </div>
+                            <div class="edu-cert-meta">
+                                <span class="edu-cert-date">Graduated 2022</span>
+                                <div class="edu-cert-score">82%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Reach out for collaborations, API automation requests, or full stack opportunities.</p>
+            </div>
+
+            <div class="contact-card">
+                <form id="contactForm" class="contact-form">
                     {% csrf_token %}
-                    <div class="name form-div">
-                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
                     </div>
-
-                    <div class="email form-div">
-                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
-                            required>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
                     </div>
-
-                    <div class="phone form-div">
-                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
-                            required>
+                    <div class="form-group">
+                        <label for="number" class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" id="number" name="number" class="form-input" placeholder="e.g. +91 9823563994">
                     </div>
-                    
-                    <div class="textarea form-div">
-                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
-                            placeholder="Enter Messages"></textarea>
+                    <div class="form-group">
+                        <label for="content" class="form-label">Message *</label>
+                        <textarea id="content" name="content" class="form-input" placeholder="How can I help you today?" required></textarea>
                     </div>
-                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                    <button type="submit" id="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <div id="formFeedback" class="form-feedback"></div>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer id="footer">
-        <ul class="flex s-center w-80 m-auto my-2 res">
-            <li><a href="#home" class="poppinss">Home</a></li>
-            <li><a href="#about" class="poppinss">About</a></li>
-            <li><a href="#skills" class="poppinss">Skills</a></li>
-            <li><a href="#projects" class="poppinss">Projects</a></li>
-            <li><a href="#portfolio" class="poppinss">Portfolio</a></li>
+        <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
-        <ul class="flex s-center w-80 font-awesome ">
-            <a href="" target="_blank">
-                <li><i class="fa-brands fa-linkedin-in"></i></li>
-            </a>
-            <a href="" target="_blank">
-                <li><i class="fa-brands fa-github"></i></li>
-            </a>
-                <a href="" target="_blank">
-                    <li><i class="fa-brands fa-instagram"></i></li>
-            </a>
-            
-        </ul>
-        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Error By Night 
-                </span></p>
-
+        <div class="footer-socials">
+            <a href="https://linkedin.com/in/dhairyashil-more-9bb50325b" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/dhairyashilmore" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:dhairyashilmore2003@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+919823563994" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Dhairyashil More. Designed in the spirit of minimal, clean engineering.</p>
     </footer>
 
+    <!-- Interactive Scripting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('mobile-active');
+                const icon = mobileToggle.querySelector('i');
+                if (navMenu.classList.contains('mobile-active')) {
+                    icon.className = 'fa-solid fa-xmark';
+                } else {
+                    icon.className = 'fa-solid fa-bars';
+                }
+            });
+
+            // Smooth close mobile menu when link is clicked
+            document.querySelectorAll('.nav-menu li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('mobile-active');
+                    mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+                });
+            });
+
+            // Skill Category Tab Switcher
+            const tabButtons = document.querySelectorAll('.skills-tabs .tab-btn');
+            const skillPanels = document.querySelectorAll('.skills-content .skills-panel');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+
+                    // Active state button
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Active state content
+                    skillPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                        if (panel.id === target) {
+                            panel.classList.add('active');
+                            // Trigger fill bar animation
+                            const fills = panel.querySelectorAll('.skill-bar-fill');
+                            fills.forEach(fill => {
+                                const finalWidth = fill.style.width;
+                                fill.style.width = '0%';
+                                setTimeout(() => {
+                                    fill.style.width = finalWidth;
+                                }, 50);
+                            });
+                        }
+                    });
+                });
+            });
+
+            // Double trigger the initial active fills for the default visible tab
+            const initialPanel = document.querySelector('.skills-panel.active');
+            if (initialPanel) {
+                const fills = initialPanel.querySelectorAll('.skill-bar-fill');
+                fills.forEach(fill => {
+                    const finalWidth = fill.style.width;
+                    fill.style.width = '0%';
+                    setTimeout(() => {
+                        fill.style.width = finalWidth;
+                    }, 100);
+                });
+            }
+
+            // Credentials Tab Switcher (Edu vs Certs)
+            const toggleButtons = document.querySelectorAll('.toggle-switch .toggle-btn');
+            const eduCertPanels = document.querySelectorAll('.edu-cert-content .edu-cert-panel');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+
+                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    eduCertPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                        if (panel.id === target) {
+                            panel.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // AJAX Form Submission
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const submitText = submitBtn.querySelector('span');
+            const submitIcon = submitBtn.querySelector('i');
+            const formFeedback = document.getElementById('formFeedback');
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Reset feedback
+                formFeedback.className = 'form-feedback';
+                formFeedback.style.display = 'none';
+
+                // Setup loading state
+                submitBtn.disabled = true;
+                submitText.textContent = 'Sending...';
+                submitIcon.className = 'fa-solid fa-spinner fa-spin';
+
+                // Grab Form Data
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch('/contact/', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok && data.success) {
+                        formFeedback.textContent = data.message;
+                        formFeedback.classList.add('success');
+                        formFeedback.style.display = 'block';
+                        contactForm.reset();
+                    } else {
+                        throw new Error(data.message || 'Validation failed. Please try again.');
+                    }
+                } catch (error) {
+                    formFeedback.textContent = error.message;
+                    formFeedback.classList.add('error');
+                    formFeedback.style.display = 'block';
+                } finally {
+                    // Restore submit button
+                    submitBtn.disabled = false;
+                    submitText.textContent = 'Send Message';
+                    submitIcon.className = 'fa-solid fa-paper-plane';
+                }
+            });
+
+            // Scroll Reveal Animation (Intersection Observer)
+            const revealOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            const itemsToReveal = document.querySelectorAll('.bento-card, .timeline-content, .project-showcase-card, .edu-cert-card, .contact-card');
+            
+            itemsToReveal.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(25px)';
+                item.style.transition = 'opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+                revealObserver.observe(item);
+            });
+        });
+    </script>
 </body>
 </html>
