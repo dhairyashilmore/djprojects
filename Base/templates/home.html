@@ -608,6 +608,42 @@
         <p class="footer-copy">&copy; 2026 Dhairyashil More. Designed in the spirit of minimal, clean engineering.</p>
     </footer>
 
+    <!-- Chatbot Floating UI -->
+    <div id="chatbot-container">
+        <!-- Floating Bubble -->
+        <button id="chatbot-bubble" aria-label="Open AI Assistant">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-status-dot"></div>
+                    <div>
+                        <h4>AI Assistant</h4>
+                        <p>Ask about Dhairyashil</p>
+                    </div>
+                </div>
+                <button id="chatbot-close" aria-label="Close Chat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="message bot-message">
+                    Hello! I'm Dhairyashil's AI assistant. Ask me anything about his technical skills, projects, certifications, or professional experience!
+                </div>
+            </div>
+            <form id="chatbotForm" class="chatbot-input-area">
+                {% csrf_token %}
+                <input type="text" id="chatbotInput" placeholder="Ask about skills, projects..." autocomplete="off" required>
+                <button type="submit" aria-label="Send Message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Interactive Scripting -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -774,6 +810,90 @@
                 item.style.transition = 'opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
                 revealObserver.observe(item);
             });
+
+            // Chatbot Floating UI Toggle
+            const chatbotBubble = document.getElementById('chatbot-bubble');
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const chatbotClose = document.getElementById('chatbot-close');
+            const chatbotForm = document.getElementById('chatbotForm');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotMessages = document.getElementById('chatbot-messages');
+
+            chatbotBubble.addEventListener('click', () => {
+                chatbotWindow.classList.toggle('active');
+                if (chatbotWindow.classList.contains('active')) {
+                    chatbotInput.focus();
+                }
+            });
+
+            chatbotClose.addEventListener('click', () => {
+                chatbotWindow.classList.remove('active');
+            });
+
+            // Handle Chatbot Messages
+            chatbotForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const text = chatbotInput.value.trim();
+                if (!text) return;
+
+                // Append user message
+                appendMessage(text, 'user-message');
+                chatbotInput.value = '';
+
+                // Show typing indicator
+                const typingIndicator = showTypingIndicator();
+
+                // Send request to backend
+                const formData = new FormData();
+                formData.append('message', text);
+                formData.append('csrfmiddlewaretoken', chatbotForm.querySelector('[name=csrfmiddlewaretoken]').value);
+
+                try {
+                    const response = await fetch('/chat/', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
+
+                    const data = await response.json();
+                    typingIndicator.remove();
+
+                    if (response.ok && data.response) {
+                        appendMessage(data.response, 'bot-message');
+                    } else {
+                        throw new Error("Oops, I encountered a temporary connection issue.");
+                    }
+                } catch (err) {
+                    typingIndicator.remove();
+                    appendMessage(err.message, 'bot-message error-message');
+                }
+            });
+
+            function appendMessage(content, type) {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `message ${type}`;
+                
+                // Format text: convert newlines to line breaks and simple markdown-like bold/link tags
+                let formatted = content
+                    .replace(/\n/g, '<br>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+                
+                msgDiv.innerHTML = formatted;
+                chatbotMessages.appendChild(msgDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            function showTypingIndicator() {
+                const indicator = document.createElement('div');
+                indicator.className = 'message bot-message typing-indicator';
+                indicator.innerHTML = '<span></span><span></span><span></span>';
+                chatbotMessages.appendChild(indicator);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+                return indicator;
+            }
         });
     </script>
 </body>

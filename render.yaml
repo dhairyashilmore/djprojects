@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: django-portfolio-hub
+    runtime: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn portfolio.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
