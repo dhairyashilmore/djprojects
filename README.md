@@ -5,7 +5,7 @@ An ultra-premium, responsive portfolio website designed in the minimalist dark a
 ---
 
 ## 🚀 Live Demo & Repository
-* **Live Website**: [View Live Demo](https://dhairyashilmore.github.io/djprojects) *(Replace with your deployed production URL)*
+* **Live Website**: [django-portfolio-hub.onrender.com](https://django-portfolio-hub.onrender.com/)
 * **Local Workspace**: [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
 * **GitHub Repository**: [github.com/dhairyashilmore/djprojects](https://github.com/dhairyashilmore/djprojects)
 
