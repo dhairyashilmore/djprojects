@@ -5,7 +5,7 @@ An ultra-premium, responsive portfolio website designed in the minimalist dark a
 ---
 
 ## 🚀 Live Demo & Repository
-* **Live Website**: [django-portfolio-hub.onrender.com](https://django-portfolio-hub.onrender.com/)
+* **Live Website**: **https://django-portfolio-hub.onrender.com/**
 
 
 ---
