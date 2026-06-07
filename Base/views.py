@@ -88,14 +88,13 @@ def chat_respond(request):
                    "• **AI / Gen AI**: Generative AI APIs (OpenAI, Claude), RAG Pipelines, Machine Learning"
     elif any(k in message for k in ['project', 'code', 'github', 'portfolio', 'work']):
         response = "He has worked on several key projects:\n\n" \
-                   "1. **AI Trace Finder**: Forensic ML app analyzing sensor pattern noise to identify image scanners.\n" \
-                   "2. **AI-Powered Job Tracker**: Django & React tracking system integrated with an LLM outreach drafting agent.\n" \
-                   "3. **Food Connect**: Real-time food distribution platform utilizing Node.js and Firebase.\n\n" \
+                   "1. **Resume Screening System**: NLP platform utilizing ML classifiers (KNN/SVM) to parse, filter, and rank candidate resumes.\n" \
+                   "2. **Apple-Inspired Portfolio Hub**: High-end Django & CSS 3D-styled website with cursor spotlight glows and an interactive chatbot.\n" \
+                   "3. **GitHub Engineering Hub**: Open-source repository hub containing Python, REST API, SQL, and ML/NLP automation codes.\n\n" \
                    "Check out his repositories on [GitHub](https://github.com/dhairyashilmore)."
     elif any(k in message for k in ['experience', 'job', 'work', 'history', 'company', 'insurance', 'support', 'trainee']):
         response = "Dhairyashil's professional history includes:\n\n" \
-                   "• **Application Support Engineer** at Bajaj Allianz Life Insurance (Jan 2026 – Present): Technical support, database validation, policy mappings, log analysis, and troubleshooting.\n" \
-                   "• **Python Developer Trainee** at Kiran Academy (Jul 2025 – Dec 2025): Full-stack training, API design, and schema optimizations."
+                   "• **Python Developer Trainee** at Bajaj Life Insurance (Jan 2026 – Present): Hands-on training in Python, OOP, SQL, Django, and REST APIs; designed and tested CRUD and secure API services; optimized MySQL database schemas."
     elif any(k in message for k in ['education', 'college', 'degree', 'cgpa', 'university', 'diploma']):
         response = "His educational qualifications:\n\n" \
                    "• **B.E. in Artificial Intelligence & Data Science** (2025) from P. R. Pote Patil College of Engineering, Amravati. CGPA: 8.27/10.\n" \
