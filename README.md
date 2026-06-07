@@ -1,4 +1,4 @@
-# Apple-Inspired Full-Stack Portfolio & AI Hub
+#Full-Stack Portfolio & AI Hub
 
 An ultra-premium, responsive portfolio website designed in the minimalist dark aesthetic of Apple product pages. This project highlights a full-stack Django architecture integrated with a customized SQLite/MySQL database, interactive front-end components, and optimized capabilities for Generative AI and Large Language Model (LLM) workflows.
 
