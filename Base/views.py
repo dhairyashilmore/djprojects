@@ -89,7 +89,7 @@ def chat_respond(request):
     elif any(k in message for k in ['project', 'code', 'github', 'portfolio', 'work']):
         response = "He has worked on several key projects:\n\n" \
                    "1. **Resume Screening System**: NLP platform utilizing ML classifiers (KNN/SVM) to parse, filter, and rank candidate resumes.\n" \
-                   "2. **Apple-Inspired Portfolio Hub**: High-end Django & CSS 3D-styled website with cursor spotlight glows and an interactive chatbot.\n\n" \
+                   "2. **AI-Powered Portfolio Hub**: High-end Django & CSS 3D-styled website with cursor spotlight glows and an interactive chatbot.\n\n" \
                    "Check out his repositories on [GitHub](https://github.com/dhairyashilmore)."
     elif any(k in message for k in ['experience', 'job', 'work', 'history', 'company', 'insurance', 'support', 'trainee']):
         response = "Dhairyashil's professional history includes:\n\n" \
