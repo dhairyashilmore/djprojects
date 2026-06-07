@@ -26,7 +26,6 @@ An ultra-premium, responsive portfolio website designed in the minimalist dark a
 * **Projects Showcase**: Apple-style sliding showcase panels highlighting project mockups, specifications, and repositories:
   * **Resume Screening System** (NLTK, Scikit-Learn, TF-IDF Vectorization)
   * **Apple-Inspired Portfolio Hub** (Django, Gunicorn, Whitenoise, CSS 3D Transforms)
-  * **GitHub Engineering Hub** (Python, SQL, REST APIs, ML/NLP)
 * **Full-Stack Contact form**: Asynchronous AJAX form submitting messages to a custom database model without page reloading.
 * **Email Notification Logging**: Automatic server email dispatching logic that notifies you upon new form submissions (currently configured to print to the terminal console).
 
